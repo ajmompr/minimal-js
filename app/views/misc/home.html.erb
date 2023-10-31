@@ -1,5 +1,6 @@
 <h1>Cities</h1>
 
+<div id="bye" style="border: thin blue dashed""> Click me </div>
 <ul id="cities_list">
   <li id="aus" class="south">Austin</li>
   <li id="bos" class="east">Boston</li>
@@ -8,10 +9,97 @@
   <li id="jfk" class="east">New York</li>
   <li id="sfo" class="west">San Francisco</li>
 </ul>
+<!--Add jQuery Library-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
   // Write your JS here.
   // Open the JS console and refresh the page to see the output.
+  console.log("howdy");
+  console.log("world");
+ //without semi-colon
+ 
 
-  
+  console.log(`Your lucky number is ${ 7 * 6 }`);
+
+  let name = "Alice";
+  console.log(`howdy, ${name}!`);
+  name = "Bob";
+  console.log(`hi, ${name}!`);
+
+  const pi = 3.14;
+  console.log(pi);
+
+ let aReallyLongVariableName = 42; 
+ console.log(aReallyLongVariableName);
+
+ function greet() {
+  console.log("howdy!");
+ }
+ greet();
+
+function greet(name) {
+  console.log(`howdy, ${name}!`);
+}
+greet("Alexandra Jasmine");
+
+let x = 5;
+console.log(`X equals ${x}`);
+x++
+console.log(`X now equals ${x}`);
+
+for (let i = 2; i < 6; i++) {
+  console.log(i*i);
+}
+
+let fruits = ["apples", "oranges", "bananas"]; 
+console.log(fruits[2]);
+console.log(fruits.length);
+
+fruits.forEach(function(fruit) {
+  console.log(`I love ${fruit}!`);
+}); 
+
+// Random Numbers in JavaScript
+let win_probability = Math.random();
+console.log(win_probability);
+
+let dice_roll = Math.floor(Math.random() * 6);
+console.log(dice_roll);
+
+// Conditionals
+const moves = ["rock", "paper", "scissors"];
+let random_index = Math.floor(Math.random() * 3);
+let computer_move = moves[random_index];
+
+console.log(`The computer played ${computer_move}.`);
+
+if (computer_move === "rock") {
+  console.log("You tied.");
+} else if (computer_move === "paper") {
+  console.log("You lost.");
+} else {
+  console.log("You won.")
+}
+
+// FizzBuzz in JavaScript
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  }
+  else if ( i % 3 === 0) {
+    console.log("Fizz");
+  }
+  else if ( i % 5 === 0) {
+    console.log("Buzz")
+  } else {
+    console.log(i)
+  }
+}
+
+//jQuery Click-handler
+$("body").on("click", "#bye", function() {
+  $(".west").slideToggle();
+});
+
 </script>
